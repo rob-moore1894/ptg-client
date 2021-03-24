@@ -1,7 +1,8 @@
 import './App.css';
 import { useEffect } from 'react';
 import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
 
@@ -10,10 +11,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Navbar />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
